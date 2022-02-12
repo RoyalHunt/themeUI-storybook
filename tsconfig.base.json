@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@loanpal/*": ["packages/*/src"]
+    },
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": false,
+    "target": "esnext",
+    "types": ["node", "react", "vite/client", "@emotion/react/types/css-prop"],
+    "typeRoots": ["**/types", "node_modules/@types"],
+    "useDefineForClassFields": true
+  },
+  "exclude": ["./.*", "node_modules", "**/*.test*", "**/*.spec*", "**/*.stories*"]
+}

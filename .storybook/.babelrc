@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "@babel/preset-react",
+      {
+        "importSource": "theme-ui",
+        "runtime": "automatic",
+        "throwIfNamespace": false
+      }
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "npmClient": "npm",
+      "allowBranch": [
+        "master"
+      ],
+      "ignoreChanges": [
+        "*.md",
+        ".spec.ts",
+        ".stories.ts"
+      ],
+      "registry": "https://registry.npmjs.org/"
+    }
+  }
+}

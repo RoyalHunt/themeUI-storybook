@@ -10,17 +10,22 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
-    "paths": {
-      "@loanpal/*": ["packages/*/src"]
-    },
-    "rootDir": ".",
     "sourceMap": true,
     "strict": true,
-    "skipLibCheck": false,
     "target": "esnext",
     "types": ["node", "react", "vite/client", "@emotion/react/types/css-prop"],
     "typeRoots": ["**/types", "node_modules/@types"],
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "declarationDir": "dist/definitions",
+    "rootDir": "src/",
+    "skipLibCheck": false
   },
-  "exclude": ["./.*", "node_modules", "**/*.test*", "**/*.spec*", "**/*.stories*"]
+  "include": ["src/"],
+  "exclude": [
+    "./.*",
+    "node_modules",
+    "**/*.test*",
+    "**/*.spec*",
+    "**/*.stories*"
+  ]
 }

@@ -1,64 +1,26 @@
 {
-  "name": "@org/library",
+  "name": "library",
   "version": "1.0.0",
   "description": "library",
-  "main": "index.js",
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "main": "dist/library.es.js",
+  "module": "dist/library.es.js",
+  "typings": "dist/definitions/index.d.ts",
+  "files": [
+    "dist"
   ],
+  "private": true,
   "scripts": {
-    "dev": "yarn storybook",
-    "build": "lerna run build",
-    "build:watch": "lerna run build:watch",
-    "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "bootstrap": "lerna bootstrap"
+    "build": "vite build"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.16.7",
-    "@emotion/babel-plugin": "^11.7.2",
-    "@emotion/eslint-plugin": "^11.7.0",
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
     "@rollup/plugin-typescript": "^8.3.0",
-    "@storybook/addon-a11y": "^6.4.18",
-    "@storybook/addon-actions": "^6.4.18",
-    "@storybook/addon-controls": "^6.4.18",
-    "@storybook/addon-docs": "^6.4.18",
-    "@storybook/addon-links": "^6.4.18",
-    "@storybook/addon-toolbars": "^6.4.18",
-    "@storybook/addon-viewport": "^6.4.18",
-    "@storybook/addons": "^6.4.18",
-    "@storybook/react": "^6.4.18",
-    "@storybook/theming": "^6.4.18",
-    "@typescript-eslint/eslint-plugin": "^5.11.0",
-    "@typescript-eslint/parser": "^5.11.0",
+    "@types/node": "^17.0.18",
+    "@types/react": "^17.0.39",
     "@vitejs/plugin-react": "^1.2.0",
-    "babel-loader": "^8.1.0",
-    "eslint": "^8.8.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-mdx": "^1.16.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^26.1.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-mdx": "^1.16.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-storybook": "^0.5.6",
-    "lerna": "^4.0.0",
-    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "storybook-builder-vite": "^0.1.15",
-    "typescript": "^4.5.5",
-    "vite": "^2.8.1"
-  },
-  "resolutions": {
-    "eslint": "^8.8.0",
     "theme-ui": "^0.13.1",
     "typescript": "^4.5.5",
-    "@emotion/react": "^11.7.1"
+    "vite": "^2.8.1"
   }
 }

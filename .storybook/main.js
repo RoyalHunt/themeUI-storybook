@@ -37,11 +37,7 @@ module.exports = {
 
     config.plugins.push(
       react({
-        jsxRuntime: 'automatic',
         jsxImportSource: 'theme-ui',
-        babel: {
-          plugins: ['@babel/plugin-transform-react-jsx'],
-        },
       })
     );
     config.resolve.alias = {

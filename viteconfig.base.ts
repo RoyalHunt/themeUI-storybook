@@ -1,13 +1,9 @@
 import path from 'path';
-
-import { UserConfigExport } from 'vite';
 import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
+import { UserConfig, UserConfigExport } from 'vite';
+import typescript from '@rollup/plugin-typescript';
 
-const args = process.argv.slice(2);
-const analyze = args.includes('--analyze');
-
-export function getBaseViteConfig(dirname: string, override?: UserConfigExport): UserConfigExport {
+export function getBaseViteConfig(dirname: string, override: UserConfig): UserConfigExport {
   const isExternal = (id: string) => !id.startsWith('.') && !path.isAbsolute(id);
 
   return {
@@ -22,15 +18,14 @@ export function getBaseViteConfig(dirname: string, override?: UserConfigExport):
       },
       rollupOptions: {
         external: isExternal,
-        ...(analyze && { plugins: [visualizer({ template: 'treemap' })] }),
       },
     },
     plugins: [
+      // typescript({
+      //   tsconfig: path.resolve(dirname, 'tsconfig.json'),
+      // }),
       react({
-        jsxImportSource: '@emotion/react',
-        babel: {
-          plugins: ['@emotion/babel-plugin'],
-        },
+        jsxImportSource: 'theme-ui',
       }),
     ],
     ...override,
